@@ -1,0 +1,28 @@
+openapi: 3.0.0
+info:
+  title: Datalore Cell
+  version: 0.0.1
+paths: {}
+components:
+  schemas:
+    cellId:
+      type: string
+    cellType:
+      type: string
+      enum: [CODE, MD, SQL]
+    cell:
+      type: object
+      required: [id, type, text, hiddenInput, hiddenOutput]
+      properties:
+        id:
+          $ref: "#/components/schemas/cellId"
+        type:
+          $ref: "#/components/schemas/cellType"
+        text:
+          type: string
+        hiddenInput:
+          type: boolean
+          default: false
+        hiddenOutput:
+          type: boolean
+          default: false

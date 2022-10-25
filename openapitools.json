@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "6.2.0",
+    "generators": {
+      "kotlin": {
+        "glob": "src/**/*.yaml",
+        "output": "gen/kotlin/",
+        "generatorName": "kotlin",
+        "globalProperty": "models",
+        "additionalProperties": {
+          "packageName": "jetbrains.datalore.notebook.common.dataloreModel",
+          "enumPropertyNaming": "UPPERCASE"
+        }
+      },
+      "typescript": {
+        "glob": "src/**/*.yaml",
+        "output": "gen/typescript/",
+        "generatorName": "typescript-fetch",
+        "globalProperty": "models",
+        "additionalProperties": {
+          "stringEnums": true
+        }
+      }
+    }
+  }
+}
